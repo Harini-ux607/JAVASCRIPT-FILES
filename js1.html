@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Scope</title>
+</head>
+<body>
+
+    <h2>var, let and const</h2>
+
+    <script>
+        var a = 10;
+        let b = 20;
+        const c = 30;
+
+        console.log("Global var:", a);
+        console.log("Global let:", b);
+        console.log("Global const:", c);
+
+        function test() {
+
+            var x = 40;
+            let y = 50;
+            const z = 60;
+
+            console.log("Function var:", x);
+            console.log("Function let:", y);
+            console.log("Function const:", z);
+
+            if (true) {
+
+                var p = 70;
+                let q = 80;
+                const r = 90;
+
+                console.log("Block var:", p);
+                console.log("Block let:", q);
+                console.log("Block const:", r);
+            }
+            console.log("Outside block var:", p);
+        }
+
+        test();
+    </script>
+
+</body>
+</html>
