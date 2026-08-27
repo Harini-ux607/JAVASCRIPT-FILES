@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.add two numbers//
+        function add(a, b) {
+            console.log(a + b)
+        }
+        add(10, 20)
+        //2.multiply two numbers//
+        function multiply(x, y) {
+            console.log(x * y)
+        }
+        multiply(5, 5)
+        //3.subtracrtion using arrow function//
+        const subtract = (a, b) => {
+            return a - b;
+        };
+        console.log(subtract(20, 8));
+        //4.function with parameter and return value//
+        function area(l, b) {
+            var a = l * b;
+            return a;
+        }
+        var result = area(10, 30);
+        console.log("Area is: " + result);//sends the value back to the caller//
+        //5.local scope and global scope//
+        var schoolName = "abc school";  //global scope-variable declared outside a function//
+        function student1() {
+            var studentName = "Harini";   //local scope-variable declared inside a function//
+            console.log(schoolName);
+            console.log(studentName);
+        }
+        student1();
+        // 6.Callback Function
+        function greetUser(callback) {
+            let name = prompt("Enter your name:");
+            callback(name);   // Calling the callback function
+            alert("Callback flow ends here");
+        }
+        function welcome(name) {
+            alert("Hello, " + name + "! Welcome to JavaScript.");
+        }
+        greetUser(welcome);
+        //7.clousure function -inner function ca access outer function//
+        function create(name) {
+            function greet() {
+                console.log("Hello " + name);  //inner function //
+            }
+            return greet;
+        }
+        let greeting = create("Harini");//outer function//
+        greeting();
+    </script>
+</body>
+
+</html>
