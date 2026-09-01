@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+    <h2>Array Methods</h2>
+    <p id="output"></p>
+    <script>
+        // Create an array
+        let fruits = ["Apple", "Banana", "Mango"];
+        // Display original array
+        document.getElementById("output").innerHTML =
+            "<strong>Original Array:</strong><br>" +
+            fruits.join(", ") + "<hr>";
+        // push() - adds element at the end
+        fruits.push("Orange");
+        document.getElementById("output").innerHTML +=
+            "<strong>After push():</strong><br>" +
+            fruits.join(", ") + "<hr>";
+        // pop() - removes last element
+        let removedPop = fruits.pop();
+        document.getElementById("output").innerHTML +=
+            "<strong>After pop():</strong><br>" +
+            fruits.join(", ") +
+            "<br>Removed: " + removedPop + "<hr>";
+        // unshift() - adds element at the beginning
+        fruits.unshift("Grapes");
+        document.getElementById("output").innerHTML +=
+            "<strong>After unshift():</strong><br>" +
+            fruits.join(", ") + "<hr>";
+        // shift() - removes first element
+        let removedShift = fruits.shift();
+        document.getElementById("output").innerHTML +=
+            "<strong>After shift():</strong><br>" +
+            fruits.join(", ") +
+            "<br>Removed: " + removedShift + "<hr>";
+        // Print all elements using for loop
+        document.getElementById("output").innerHTML +=
+            "<strong>Array Elements using for loop:</strong><br>";
+        for (let i = 0; i < fruits.length; i++) {
+            document.getElementById("output").innerHTML +=
+                fruits[i] + "<br>";
+        }
+    </script>
+</body>
+</html>
