@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Student Object</h2>
+    <p id="name"></p>
+    <p id="age"></p>
+    <p id="modifiedName"></p>
+    <p id="modifiedAge"></p>
+    <p id="message"></p>
+    <script>
+        // Create an object
+        let student = {
+            name: "HARINI M",
+            age: 20,
+            sayHello: function() {
+                return "Hello, my name is " + this.name;
+            }
+        };
+        // Access object properties
+        document.getElementById("name").innerHTML =
+            "Name: " + student.name;
+        document.getElementById("age").innerHTML =
+            "Age: " + student.age;
+
+        // Modify object properties
+        student.name = "JAYAHARINI M";
+        student.age = 19;
+        document.getElementById("modifiedName").innerHTML =
+            "Modified Name: " + student.name;
+        document.getElementById("modifiedAge").innerHTML =
+            "Modified Age: " + student.age;
+        // Call object method
+        document.getElementById("message").innerHTML =
+            student.sayHello();
+    </script>
+</body>
+</html>
